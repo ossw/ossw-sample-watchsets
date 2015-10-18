@@ -1,0 +1,53 @@
+{
+	"type": "watchset",
+	"name": "heart rate with graphics (peripheral)",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+			    "id": "heartRate",
+			    
+			    "controls": [
+			   		{
+			    		"type": "image",
+			    		"position": {"x": 16, "y": 68},
+			    		"style": {"width": 29, "height": 24},
+			    		"image": {"type": "resource", "id": "heart"}
+			    	},
+			   		{
+			    		"type": "image",
+			    		"position": {"x": 86, "y": 110},
+			    		"style": {"width": 36, "height": 19},
+			    		"image": {"type": "resource", "id": "bpm"}
+			    	},
+			    	{
+			    		"type": "number",
+			    		"numberRange": "0-999",
+			    		"position": {"x": 46, "y": 52},
+			    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "numbers"}, "space": 3, "leftPadded": false},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.ipsensorman", "property": "heartRate"}
+			    	}
+			    ],
+			    
+				"actions": {
+					"button_back_long": {"action": "toggleBacklight"},
+					"button_back_short": {"action": "close"}
+				}
+			}
+		],
+		"resources": [
+			{
+				"id": "heart",
+				"data": "AQAdGAeADwAf4D/AP/B/4H/4//B////w////+P////j////4////+H////B////wP///4B///8AP//+AB///AAP//gAB//wAAP/4AAB/8AAAP+AAAB/AAAAPgAAABwAAAAIAAA=="
+			},
+			{
+				"id": "bpm",
+				"data": "AQAkE8AAAAAAwAAAAADAAAAAAMAAAAAA/5/ze+D/3/v/8OHcO55wwNgbDDDA2BsMMMDYGwwwwNgbDDDA2BsMMOHcOwww/9/7DDD/n/MMMAAYAAAAABgAAAAAGAAAAAAYAAAA"
+			},
+			{
+				"id": "numbers",
+				"data": "AwAaMwf/+AA///8Af///gH///4D////A////wP///8D////A////wP+Af8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/4B/wP///8D////A////wP///8D////Af///gH///4A///8AD//8AAAAP8AAAP/AAAP/wAAP/8AAD//AAA//wAAP/8AAD//AAA//wAAP/8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wA//8AA///4Af///gH///4D////A////wP///8D////A////wP///8D/gH/A/4B/wP+Af8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AA///wB///8A////Af///wH///8B///+A////gP///wD///wA/8AAAP+AAAD/gAAA/4AAAP+AAAD/gAAA/4AAAP+AAAD/gAAA/4AAAP///8D////A////wP///8D////Af///wH///8A////AD///wB///AB///8A////gP///8D////A////wP///8D////A////wP8A/8D/AH/A/wB/wP8Af8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAD//8AA///AAP//gAD//4AA//8AAP//AAD//4AA///AAP//wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8AAAH/AAAB/wP8Af8D/AH/A/4D/wP///8D////A////wP///8D////Af///gH///4A///8AD//8AAAAf8AAAP/AAAD/wAAB/8AAAf/AAAP/wAAD/8AAB//AAAf/wAAP/8AAD//AAB//wAAf/8AAP//AAD//wAB//8AAf//AAP//wAD/v8AB/z/AAf8/wAP+P8AD/j/AB/w/wAf8P8AP+D/AD/g/wB/wP8Af8D/AP+A/wD///8B////A////wP///8B////AP///wB///8AP///AB///wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wP///8D////A////wP///8D////A////wP///8D////A////wP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA///wAP///wD///+A////wP///8B////Af///wD///8AP///AAAB/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/A/wA/wP8AP8D/AD/A/4B/wP///8D////A////wP///8D////Af///gH///4A///8AD//8AAf//AA///8Af///gP///8D////A////wP///8D////A////wP+AP8D/AD/A/wA/wP8AP8D/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA///4AP///gD///8A////gP///8D////A////wP///8D////A/4B/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/4B/wP///8D////A////wP///8D////A////gP///4B///8AH//8AP///gD///8A////gP///8D////A////wP///8D////A////gP8A/4D/AP+AfwD/AAAB/wAAAf8AAAH+AAAB/gAAA/4AAAP8AAAD/AAAB/wAAAf4AAAH+AAAD/gAAA/wAAAP8AAAH/AAAB/gAAAf4AAAP+AAAD/AAAA/wAAAf8AAAH+AAAB/gAAA/4AAAP8AAAD/AAAB/wAAAf4AAAH+AAAD/gAAA/wAAAP8AAAH/AAAB/gAAAf4AAAP+AAAD/gAAA/wAAAP8AAAD/AAAAf//AAf//8AP///gH///8B////A////wP///8D////A////wP///8D/gH/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/4B/wP///8B////Af///wD///4Af//8AP///gH///4B////Af///wP+Af8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/4B/wP///8D////A////wP///8D////Af///wH///8A///+AD//+AA///AA///8Af///gH///4D////A////wP///8D////A////wP///8D/gH/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP8AP8D/AD/A/wA/wP+Af8D////A////wP///8D////A////wH///8B////AP///wB///8AAAH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/A/wA/wP8AP8D/AD/A/4B/wP///8D////A////wP///8D////Af///gH///4B///8AP//8AA=="
+			}
+		]
+	}
+}

@@ -1,0 +1,119 @@
+{
+	"type": "watchset",
+	"name": "music player",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+			    "id": "musicplayer",
+			    
+			    "controls": [
+			    	{
+			    		"type": "text",
+			    		"position": {"x": 2, "y": 2},
+			    		"size": {"width": 140, "height": 40},
+			    		"font": {"type": "builtin", "name": "optionNormal"},
+			    		"style": {"horizontalAlign": "center", "verticalAlign": "bottom", "multiline": "true"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "artist"}
+			    	},
+			    	{
+			    		"type": "text",
+			    		"position": {"x": 2, "y": 46},
+			    		"size": {"width": 140, "height": 40},
+			    		"font": {"type": "builtin", "name": "optionNormal"},
+			    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "track"}
+			    	},
+			    	{
+			    		"type": "text",
+			    		"position": {"x": 2, "y": 90},
+			    		"size": {"width": 140, "height": 40},
+			    		"font": {"type": "builtin", "name": "optionNormal"},
+			    		"style": {"horizontalAlign": "center", "verticalAlign": "top", "multiline": "true"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "album"}
+			    	},
+				    {
+				    	"type": "imageFromSet",
+				    	"position": {"x": 64, "y": 149},
+				    	"style": {"width": 17, "height": 17},
+				    	"imageSet": {"type": "resource", "id": "empty_or_mute"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "muted"}
+				    }
+			    ],
+				"actions": {
+					"button_up_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "prevTrack"},
+					"button_select_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "playPause"},
+					"button_select_long": {"action": "showScreen", "screenId": "volume"},
+					"button_down_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "nextTrack"},
+					"button_down_long": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "toggleMute"},
+					"button_back_short": {"action": "close"},
+					"button_back_long": {"action": "toggleBacklight"}
+				}
+			},
+			{
+			    "id": "volume",
+			    
+			    "controls": [
+			    	{
+			    		"type": "text",
+			    		"position": {"x": 2, "y": 2},
+			    		"size": {"width": 140, "height": 40},
+			    		"font": {"type": "builtin", "name": "optionNormal"},
+			    		"style": {"horizontalAlign": "center", "verticalAlign": "bottom", "multiline": "true"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "artist"}
+			    	},
+			    	{
+			    		"type": "text",
+			    		"position": {"x": 2, "y": 46},
+			    		"size": {"width": 140, "height": 40},
+			    		"font": {"type": "builtin", "name": "optionNormal"},
+			    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "track"}
+			    	},
+			    	{
+			    		"type": "text",
+			    		"position": {"x": 2, "y": 90},
+			    		"size": {"width": 140, "height": 40},
+			    		"font": {"type": "builtin", "name": "optionNormal"},
+			    		"style": {"horizontalAlign": "center", "verticalAlign": "top", "multiline": "true"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "album"}
+			    	},
+			    	{
+			    		"type": "progress",
+			    		"maxValue": 100,
+			    		"position": {"x": 2, "y": 154},
+			    		"size": {"width": 140, "height": 12},
+			    		"style": {"border": 1},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "volume"}
+			    	},
+				    {
+				    	"type": "imageFromSet",
+				    	"position": {"x": 64, "y": 134},
+				    	"style": {"width": 17, "height": 17},
+				    	"imageSet": {"type": "resource", "id": "sound_or_mute"},
+			    		"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "muted"}
+				    }
+			    ],
+				"actions": {
+					"button_up_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "volumeUp"},
+					"button_up_long": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "volumeMax"},
+					"button_select_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "playPause"},
+					"button_select_long": {"action": "showScreen", "screenId": "musicplayer"},
+					"button_down_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "volumeDown"},
+					"button_down_long": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "volumeMin"},
+					"button_back_short": {"action": "close"},
+					"button_back_long": {"action": "toggleBacklight"}
+				}
+			}
+		], "resources": [
+			{
+				"id": "empty_or_mute",
+				"data": "AgAAAhERAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAA4AAB4AAD4AA/YAA+bGAwbuAwZ8AwY4AwZ8AwbuA+bGA/YAAD4AAB4AAA4AAAYAA"
+			},
+			{
+				"id": "sound_or_mute",
+				"data": "AgAAAhERAYAAA4AAB4wAD4YA/aYA+bMAwbsAwZmAwZmAwZmAwbsA+bMA/aYAD4YAB4wAA4AAAYAAAYAAA4AAB4AAD4AA/YAA+bGAwbuAwZ8AwY4AwZ8AwbuA+bGA/YAAD4AAB4AAA4AAAYAA"
+			}
+		]
+	}
+}

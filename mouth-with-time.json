@@ -1,0 +1,50 @@
+{
+	"type": "watchset",
+	"name": "mouth with time",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+			    "id": "watchface",
+			    
+			    "controls": [
+			    	{
+			    		"type": "image",
+			    		"position": {"x": 0, "y": 0},
+			    		"style": {"width": 144, "height": 168},
+			    		"image": {"type": "resource", "id": "background"}
+			    	},
+			    	{
+			    		"type": "number",
+			    		"numberRange": "0-99",
+			    		"position": {"x": 15, "y": 80},
+			    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "numbers"}, "space": 3, "leftPadded": true},
+			    		"source": {"type": "internal", "property": "hour"}
+			    	},
+			    	{
+			    		"type": "number",
+			    		"numberRange": "0-99",
+			    		"position": {"x": 80, "y": 80},
+			    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "numbers"}, "space": 3, "leftPadded": true},
+			    		"source": {"type": "internal", "property": "minutes"}
+			    	}
+			    ],
+			    
+				"actions": {
+					"button_back_long": {"action": "toggleBacklight"},
+					"button_back_short": {"action": "close"}
+				}
+			}
+		],
+		"resources": [
+			{
+				"id": "background",
+				"data": "AQCQqAAAP/////////////////wAAAAH///////////////////gAAAf///////////////////4AAB////////////////////+AAH/////////////////////gAP/////////////////////wAf/////////////////////4A//////////////////////8A//8B///////////////Af/8B//gAP/////////////4AD/+B//AAD/////////////wAA/+D/8AAB/////////////AAAf/D/4AA4////////////+AAHP/H/wAB8f///////////8AAPn/n/wAD+P///////////8AAfz/n/gAD+P///////////4AAfz/n/AAD+H///////////wAAfx/n/AAB+H///////////wAAPx///AAA8H///////////wAAHh//+AAAAD///////////gAAAA//+AAAAD///////////gAAAA//+AAAAD///////////gAAAA//+AAAAD///////////gAAAA//+AAAAD///////////gAAAA//+AAAAD///////////gAAAA//+AAAAD///////////gAAAA///AAAAH///////////wAAAB///AAAAH///////////wAAAB///AAAAH///////////wAAAB///gAAAP///////////4AAAD///gAAAP///////////4AAAD///wAAAf///////////8AAAH///4AAA////////////+AAAP///8AAB/////////////AAAf///+AAD/////////////gAA/////gAP/////////////4AD/////8B///////////////Af/////////////////////////////////////////////////////////////////////////////////////////////////////8AAAAAAAAAAAAAAAAH//////gAAAAAAAAAAAAAAAAA/////+AAAAAAAAAAAAAAAAAAP////8AAAAAAAAAAAAAAAAAAD////4AAAAAAAAAAAAAAAAAAB////wf/////////////////w////g//////////////////wf///A//////////////////wP//+Af/////////////////gH//8AP/////////////////AD//8AH////////////////+AD//4AD///+f///////j///8AB//4AB///8P///////B///4AB//4AA///4H///P//+A///wAB//wAAf//wD//+H//8Af//gAA//wAAP//gB//8D//4AP//AAA//wAAH//AA//4B//wAH/+AAA//wAAD/+AAf/wA//gAD/8AAA//wAAB/8AAP/gAf/AAB/4AAA//wAAA/4AAH/AAP+AAA/wAAA//wAAAfwAAD+AAH8AAAfgAAA//wAAAPgAAB8AAD4AAAPAAAA//wAAAHAAAA4AABwAAAGAAAA//wAAACAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAcAAAAAAAAAA//wAAAAAAAAAA+AAAAAAAAAA//wAAAAAAAAAB/AAAAAAAAAA//wAAAAAAAAAB/AAAAAAAAAA//wAAAAAAAAAB/AAAAAAAAAA//wAAAAAAAAAA/AAAAAAAAAA//wAAAAAAAAAAeAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAcAAAAAAAAAA//wAAAAAAAAAA+AAAAAAAAAA//wAAAAAAAAAB/AAAAAAAAAA//wAAAAAAAAAB/AAAAAAAAAA//wAAAAAAAAAB/AAAAAAAAAA//wAAAAAAAAAA/AAAAAAAAAA//wAAAAAAAAAAeAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAAAAAAAAAAAAAAAAAAAA//wAAABAAAAAAAAAAAABAAAA//wAAADgAAAcAAA4AAADgAAA//wAAAHwAAA+AAB8AAAHwAAA//wAAAP4AAB/AAD+AAAP4AAA//wAAAf8AAD/gAH/AAAf8AAA//wAAA/+AAH/wAP/gAA/+AAA//wAAB/+AAP/4Af/wAB//AAA//wAAD//AAf/8A//4AD//gAA//wAAH//gA//+B//8AH//wAA//4AAP//wB///D//+AP//4AB//4AAf//4D///n///Af//8AB//4AA///4H///////g///+AB/38AB///8P///////x////AD/38AD///+/////////////gD/n+AH/////////////////wH/n/AP/////////////////4P/n/gf/////////////////8f/j/wf/////////////////8//D/4P/////////////////5//B/8AAAAAAAAAAAAAAAAAAD/+B/+AAAAAAAAAAAAAAAAAAH/+A//gAAAAAAAAAAAAAAAAAf/8Af/8AAAAAAAAAAAAAAAAD//4Af/////////////////////4AP/////////////////////wAD/////////////////////AAB////////////////////+AAAf///////////////////4AAAP///////////////////wAAAAf/////////////////4AAA=="
+			},
+			{
+				"id": "numbers",
+				"data": "AQAYLQAAAAB+AAH/gAP/wAf/4A//8A//8B//+B//+D/D/D+B/H8A/n4Afn4AfnwAPvwAP/wAP/gAP/gAH/gAH/gAH/gAH/gAH/gAH/gAH/gAH/gAH/gAP/gAP/wAP/wAP3wAfn4Afn4Afn8A/D+B/D/D/B//+B//+A//8A//8Af/4AP/wAH/gAB+AAAAeAAB/AAD/AAH/AAP/AA//AD//AH//AH//AH//AH//AHh/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAB/AAAAAAAAAD+AAf/gA//4D//8H//8P//+P//+P8P/HwD/HAB/GAB/EAA/AAA/AAA/AAA/AAA/AAA/AAB+AAB+AAB+AAD8AAD8AAH4AAH4AAPwAAfgAAfgAA/AAA/AAB+AAD8AAD4AAH4AAPwAAfgAA/gDx///z///3///3///3///3///3///wAAAAAAAAH+AA//gB//4D//8D//+D//+D///DwP/DAD/AAB/gAB/gAB/gAA/gAA/AAB/AAB/AAD/A+H+A//+A//8A//4A//4A//+A///AAH/AAB/gAA/gAA/gAAfwAAfwAAfwAAfwAAfwAA/yAA/ngB/n4H/v///v///P//+P//+H//8B//wAP/AAAAAAAHgAAPwAAP8AAf8AAf8AA/8AA/8AB/8AB/8AB78AD78AD78AHz8AHz8APj8APj8AfD8AfD8A+D8A+D8B8D8B8D8D4D8D4D8HwD8PwD8PgD8P///////////////////////////38D8AAD8AAD8AAD8AAD8AAD8AAD8AAD8AAD8AAD8A+A+B//+B//+B//+B//+B//+B//+B//+B8A8B8AAB8AAB8AAB8AAB8AAB8AAB8AAB8AAB8/gB//4B//8B//+B///B///B///h4H/gAB/gAA/gAA/wAAfwAAfwAAfwAAfwAAfwAA/kAA/mAB/ngD/n4P/H///P//+P//+P//8H//4A//gAH+AAAAAAAD4AAP4AA/4AB/8AD/8AH/8AP/8Af/AAf4AA/wAA/gAB/AAB+AAD8AAD8fgD9/4H//8H//+H///H/B/H8A/v4Afv4Afv4AP/wAP/wAP/wAP/wAP/wAP34AP34AP34AP34AP38Afj8Afj+A/j/B/B///B///A//+Af/8AP/4AH/wAB/AAAAAAAAAH///n///3///3///3///3///n///n8A/AAB/AAB+AAB+AAD8AAD8AAD4AAH4AAH4AAPwAAPwAAPwAAfgAAfgAAfgAA/gAA/AAB/AAB/AAB/AAD+AAD+AAD+AAD+AAH+AAH8AAH8AAP8AAP8AAP8AAP4AAP4AAf4AAf4AAf4AAPwAAAAAAB/AAH/wAf/4A//8B//+B///D///D/B/j+A/j8Afn8Afn4APn4APj8APj8APj+Afj/gfj/w/B/8/B//+A//+A//8B//8D//+D+//H8P/n4D/n4A/v4A//wAf/wAf/wAf/4Af34Af34Af38A/n/B/j///j///B///A//+Af/8AP/wAD/AAD+AAP/gAf/4A//8B//8D//+D///H/D/H8B/H4A/n4AfnwAfvwAfvwAP/wAP/wAP/wAP/wAP/wAP34AP34Af34Af38A/z/D/z///x///g//fgf+fgH4/gAA/AAB/AAB/AAD+AAH+AAP8AA/8AD/4A//wA//gA//AA/+AA/8AA/wAAfAAAAAAA=="
+			}
+		]
+	}
+}
