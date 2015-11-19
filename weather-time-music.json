@@ -1,0 +1,134 @@
+{
+	"type": "watchset",
+	"name": "weather-time-music",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+			"id": "main-watch-face",
+			"controls": [
+			{
+			"type": "imageFromSet",
+			"position": {"x": 90, "y": 1},
+			"style": {"width": 32, "height": 32},
+			"imageSet": {"type": "resource", "id": "weather"},
+			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherId"}
+			},
+			{
+			"type": "number",
+			"numberRange": "0-99",
+			"position": {"x": 14, "y": 1},
+			"style": {"type": "generated", "thickness": 1, "width": 5, "height": 9, "space": 1, "leftPadded": true},
+			"source": {"type": "internal", "property": "dayOfMonth"}
+			},
+			{
+			"type": "number",
+			"numberRange": "0-99",
+			"position": {"x": 32, "y": 1},
+			"style": {"type": "generated", "thickness": 1, "width": 5, "height": 9, "space": 1, "leftPadded": true},
+			"source": {"type": "internal", "property": "month"}
+			},
+			{
+			"type": "text", "length": 6,
+			"position": {"x": 0, "y": 14},
+			"size": {"width": 70, "height": 20},
+			"font": {"type": "builtin", "name": "optionBig"},
+			"style": {"horizontalAlign": "center"},
+			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "temperature"}
+			},
+			{
+			"type": "text", "length": 4,
+			"position": {"x": 4, "y": 38},
+			"size": {"width": 30, "height": 12},
+			"font": {"type": "builtin", "name": "smallRegular"},
+			"style": {"horizontalAlign": "left"},
+			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "humidity"}
+			},
+			{
+			"type": "text", "length": 5,
+			"position": {"x": 34, "y": 38},
+			"size": {"width": 35, "height": 12},
+			"font": {"type": "builtin", "name": "smallRegular"},
+			"style": {"horizontalAlign": "left"},
+			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "windSpeed"}
+			},
+			{
+			"type": "text", "length": 7,
+			"position": {"x": 4, "y": 50},
+			"size": {"width": 44, "height": 12},
+			"font": {"type": "builtin", "name": "smallRegular"},
+			"style": {"horizontalAlign": "left"},
+			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "pressure"}
+			},
+			{
+			"type": "text", "length": 20,
+			"position": {"x": 70, "y": 33},
+			"size": {"width": 74, "height": 30},
+			"font": {"type": "builtin", "name": "smallRegular"},
+			"style": {"horizontalAlign": "center", "multiline": "true"},
+			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherDescription"}
+			},
+			{
+			"type": "number",
+			"numberRange": "0-99",
+			"position": {"x": 4, "y": 64},
+			"style": {"type": "generated", "thickness": 6, "width": 30, "height": 50, "space": 4, "leftPadded": true},
+			"source": {"type": "internal", "property": "hour"}
+			},
+			{
+			"type": "number",
+			"numberRange": "0-99",
+			"position": {"x": 76, "y": 64},
+			"style": {"type": "generated", "thickness": 6, "width": 30, "height": 50, "space": 4, "leftPadded": true},
+			"source": {"type": "internal", "property": "minutes"}
+			},
+			{
+			"type": "number",
+			"numberRange": "0-999",
+			"position": {"x": 129, "y": 1},
+			"style": {"type": "generated", "thickness": 1, "width": 4, "height": 6, "space": 1, "leftPadded": false},
+			"source": {"type": "internal", "property": "batteryLevel"}
+			},
+			{
+			 "type": "text", "length": 60,
+			 "position": {"x": 0, "y": 120},
+			 "size": {"width": 144, "height": 24},
+			 "font": {"type": "builtin", "name": "smallRegular"},
+			 "style": {"horizontalAlign": "center", "multiline": "true"},
+			 "source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "track"}
+			},
+			{
+	 		"type": "text", "length": 30,
+	 		"position": {"x": 0, "y": 144},
+			"size": {"width": 144, "height": 12},
+	 		"font": {"type": "builtin", "name": "smallRegular"},
+			"style": {"horizontalAlign": "center"},
+			"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "album"}
+		 	},
+			{
+	 		"type": "text", "length": 30,
+	 		"position": {"x": 0, "y": 156},
+	 		"size": {"width": 144, "height": 12},
+			"font": {"type": "builtin", "name": "smallRegular"},
+			"style": {"horizontalAlign": "center"},
+			"source": {"type": "extension", "extensionId": "com.althink.android.ossw.plugins.musicplayer", "property": "artist"}
+			}
+			],
+			"actions": {
+				"button_up_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "prevTrack"},
+				"button_up_long": {"action": "toggleColors"},
+				"button_select_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "playPause"},
+				"button_select_long": {"action": "settings"},
+				"button_down_long": {"action": "toggleBacklight"},
+				"button_down_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "nextTrack"}
+			}
+			}
+		],
+		"resources": [
+		{
+		"id": "weather",
+		"data": "FAAACyAgAAGAAAABgAAAwYMAAcGDgADhhwAAYYYAAHAOABAgBAg4D/AcPj/8fA94HvACcA5AAOAHAADAAwAAwAMA/MADP/zAAz8AwAMAAMADAADgBwACcA5AD3ge8D4//Hw4D/AcECAECABwDgAAYYYAAOGHAAHBg4AAwYMAAAGAAAABgAAAAAAAADAAAAIxgAACMQAAAzMAAAH+EAA5/jAAD8/gAAcDAAAHAD8AfgD/wH4B4eAHD8DgBj+AcAx/ADA44AA4IMAAPAPAAB4PwAAGH8AABxwAAAMYAAAHGAAABxgAAA4eAAAeD////Af///AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwAAAP/AAAHh4AADwHAAP4AwAH8AOADgADwAwAAeAcAADw+AAAOfgAAB3AAAAfgAAADwAAAB+AAAAfgAAAOcAAAHn////wf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8AAAB/wAAA8+AAAcDwAB+AcAB/ADgA8AA4AOAAHgHAAB8HwAADn4AAAZwAAAH4AAAA+AAAAfAAAAH4AAABnAAAA5////8P///+Af//8AAAAAAAAAAAAAAEAAAAHAAAAHwAAAB8AAAAeAAAAHgAAAAAAAAAAAAAAAAAAAAAAAAAHwAAAH/AAADz4AABwPAAH4BwAH8AOADwADgA4AAeAcAAHwfAAAOfgAABnAAAAfgAAAD4AAAB8AAAAfgAAAGcAAADn////w////4B///wAAAAAAAAADAAAADwAMAB8APAAfADwAHgA8Ag4APA4AAAAeAAAAPgAAAB4AAAAcAAAAAfAAAAf8AAAPPgAAHA8AAfgHAAfwA4APAAOADgAB4BwAAfB8AAA5+AAAGcAAAB+AAAAPgAAAHwAAAB+AAAAZwAAAOf////D////gH///AAAAAAAAAABACAABwDgEA8B4BAfAeDUDwHgeA4Bwf8AAAB4AAAAfAAAAJYAAAAQAAAAB8AAAB/wAAA8+AAAcDwAB+AcAB/ADgA8AA4AOAAHgHAAB8HwAADn4AAAZwAAAH4AAAA+AAAAfAAAAH4AAABnAAAA5////8P///+Af//8AAAAAAAACAAAAGsAAAA+AAAAPgAAAP+AAAA+AAAAKwAAAAgAAAAAAAAAAAAAAAAAAAAHwAAAH/AAADz4AABwPAAH4BwAH8AOADwADgA4AAeAcAAHwfAAAOfgAABnAAAAfgAAAD4AAAB8AAAAfgAAAGcAAADn////w////4B///wAAAAAACAAGsCkAA+A+Ag/wPgIP8H+Kw+AeB4awLz/ggAgHgAAAD4AAABpAAAACAAAAAfAAAAf8AAAPPgAAHA8AAfgHAAfwA4APAAOADgAB4BwAAfB8AAA5+AAAGcAAAB+AAAAPgAAAHwAAAB+AAAAZwAAAOf////D////gH///gAAAAYAAAAPAIAAGwDAABOBYAALAnAYDgNwPAYB4G4AAMBOAAAALAAAABgAAAAYAAAAB8AAAB/wAAA8+AAAcDwAB+AcAB/ADgA8AA4AOAAHgHAAB8HwAADn4AAAZwAAAH4AAAA+AAAAfAAAAH4AAABnADwA5/w8/8P+Of+AfHj8AABwAAAA8AAAAPwAAAD8AAAAOAAAADAAAAAwAAAAYAAAAEAAAABAAAAAAAAAAAAAAAA/8AAD//wAD/h/AD8AB4B4AAOA8H/hgcH/8YOD4AGDB4ADhw4ABwcMAB4HAAA8A4AB+APwH+AB//+OAP/4PgB/g/wAH//wAA//AAAH4AAAAf4AAAD/4AADj+AAA8AAAAH8AAAGfwAABw8AAAPgAAAB8AAAHiAAAHwAAAB4AAAA=="
+		}
+		]
+	}
+}
