@@ -1,0 +1,256 @@
+{
+	"type": "watchset",
+	"name": "text matrix with time",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+			    "id": "watchface",
+
+			    "controls": [
+			    	{
+			    		"type": "image",
+			    		"position": {"x": 0, "y": 0},
+			    		"image": {"type": "resource", "id": "text-matrix-background"}
+			    	},
+						{
+								"type": "image",
+								"position": {"x": 5, "y": 4},
+								"image": {"type": "resource", "id": "text-matrix-it"}
+						},
+						{
+								"type": "image",
+								"position": {"x": 47, "y": 4},
+								"image": {"type": "resource", "id": "text-matrix-is"}
+						},
+						{
+								"choose": {"type": "internal", "property": "time", "converter": ["timeToFiveMinutesRoundTime", "timeToMinutes", "minutesToPastToMinutes"]},
+								"when": {
+										"5": {
+												"type": "image",
+												"position": {"x": 88, "y": 34},
+												"image": {"type": "resource", "id": "text-matrix-five"}
+										},
+										"10": {
+												"type": "image",
+												"position": {"x": 88, "y": 49},
+												"image": {"type": "resource", "id": "text-matrix-ten"}
+										},
+										"15": [
+												{
+														"type": "image",
+														"position": {"x": 18, "y": 19},
+														"image": {"type": "resource", "id": "text-matrix-a"}
+												},
+												{
+														"type": "image",
+														"position": {"x": 46, "y": 19},
+														"image": {"type": "resource", "id": "text-matrix-quarter"}
+												}
+										],
+										"20": {
+												"type": "image",
+												"position": {"x": 4, "y": 34},
+												"image": {"type": "resource", "id": "text-matrix-twenty"}
+										},
+										"25":  [
+												{
+														"type": "image",
+														"position": {"x": 4, "y": 34},
+														"image": {"type": "resource", "id": "text-matrix-twenty"}
+												},
+												{
+														"type": "image",
+														"position": {"x": 88, "y": 34},
+														"image": {"type": "resource", "id": "text-matrix-five"}
+												}
+										],
+										"30": {
+												"type": "image",
+												"position": {"x": 18, "y": 49},
+												"image": {"type": "resource", "id": "text-matrix-half"}
+										}
+								}
+						},
+						{
+								"choose": {"type": "internal", "property": "time", "converter": ["timeToFiveMinutesRoundTime", "timeToMinutes", "minutesToPastToDesignator"]},
+								"when": {
+									"0": {
+											"type": "image",
+											"position": {"x": 60, "y": 154},
+											"image": {"type": "resource", "id": "text-matrix-oclock"}
+									},
+									"1": {
+											"type": "image",
+											"position": {"x": 60, "y": 64},
+											"image": {"type": "resource", "id": "text-matrix-past"}
+									},
+									"2": {
+											"type": "image",
+											"position": {"x": 32, "y": 64},
+											"image": {"type": "resource", "id": "text-matrix-to"}
+									}
+								}
+						},
+						{
+								"choose": {"type": "internal", "property": "time", "converter": ["timeToFiveMinutesRoundTime", "timeToRoundedHour24", "hour24ToHour12"]},
+								"when": {
+										"1": {
+												"type": "image",
+												"position": {"x": 4, "y": 139},
+												"image": {"type": "resource", "id": "text-matrix-one"}
+										},
+										"2": {
+												"type": "image",
+												"position": {"x": 60, "y": 109},
+												"image": {"type": "resource", "id": "text-matrix-two"}
+										},
+										"3": {
+												"type": "image",
+												"position": {"x": 4, "y": 124},
+												"image": {"type": "resource", "id": "text-matrix-three"}
+										},
+										"4": {
+												"type": "image",
+												"position": {"x": 4, "y": 94},
+												"image": {"type": "resource", "id": "text-matrix-four"}
+										},
+										"5": {
+												"type": "image",
+												"position": {"x": 4, "y": 109},
+												"image": {"type": "resource", "id": "text-matrix-five"}
+										},
+										"6": {
+												"type": "image",
+												"position": {"x": 102, "y": 109},
+												"image": {"type": "resource", "id": "text-matrix-six"}
+										},
+										"7": {
+												"type": "image",
+												"position": {"x": 74, "y": 94},
+												"image": {"type": "resource", "id": "text-matrix-seven"}
+										},
+										"8": {
+												"type": "image",
+												"position": {"x": 74, "y": 124},
+												"image": {"type": "resource", "id": "text-matrix-eight"}
+										},
+										"9": {
+												"type": "image",
+												"position": {"x": 4, "y": 79},
+												"image": {"type": "resource", "id": "text-matrix-nine"}
+										},
+										"10": {
+												"type": "image",
+												"position": {"x": 4, "y": 154},
+												"image": {"type": "resource", "id": "text-matrix-ten"}
+										},
+										"11": {
+												"type": "image",
+												"position": {"x": 60, "y": 79},
+												"image": {"type": "resource", "id": "text-matrix-eleven"}
+										},
+										"12": {
+												"type": "image",
+												"position": {"x": 46, "y": 139},
+												"image": {"type": "resource", "id": "text-matrix-twelve"}
+										}
+								}
+					}
+			    ],
+
+					"defaultActions": "watchface"
+			}
+		],
+		"resources": [
+			{
+				"id": "text-matrix-background",
+				"data": "AQCQqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKgKqCgAKgFUBVAVQKqAqBAEAFAFUBAAFAKqCqgqoFUAUCgKACAAgCgACAEFBBQQUAgAIBQUAFABQBAAFAKACggoABQAUCoqACAAgCgACAFUBVQVQAgAIBVUAFABQBAAFACqCqgKoBQAUCqqACAAgCgACAAFBBQAUAgAIBFEAFABQBAAFAKCCggoIBQAUCiKAKgAgCqgKgFVBBQVUAgAqBAEAVQBQBVQVQCqCggKoBQBVCgKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVUFUAqgKoKCBVAqoKqBVQqoAqoKqBVQVUEFCqgVUFUCqgVUAQAEFCggoIKCBBQoIAgBAAoIAoAKCBAAQUEFCggQUBQCgAQUAVAFVCgAoIKCBVQqoAgBUAqoAqAKqBAAQUEFCqgVQBQCoAVQAQAEFCgAoIKCBBQooAgBAAooAoAKCBBQRUEFCggQUBQCgAQUAVUEFCqgqoKqBBQoIAgBVQoIAqoKCBVAVQFUCggQUBQCqgQUAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqooChVQQUKqCigVUCoCAgVUAVQQBCqgoIFUBBAqoBQFBQqoACAoihAAUUAgCigQAAgCAgQAAFARRCgAqIBQBBAoABQFBQoAACAqqhUAVUAgAqAVAAgCAgVAAFAVVCoAqoBQBVAqABQFBQqAACAqKhAARUAgAIAQAAgCigQAAFAUFCgAooBQAUAoABQBVAoAACAoChVQQUAgAIAQACoAqAVUAFAQBCqgoIBQAUAoAFUAUAqoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIKCBVAoAFVBVAqoFVBBQKoBQUEFCqgQAKqCqgVQKqCggVUAgIKCBBQoAEABBQCAEABRQoIBQUEFCggQAKACggFAKACogQAAgIKqBVQoAFQBVACAFQBVQooBQUFVCqgQAKgCqgFAKgCqgQUAooKCBBQoAEABBQCAEABFQoIAVQEFCggQAKACggFAKACigQUAKgKCBBQqoEABVQCAFVBBQqoAFAEFCggVUKACqgFAKqCggVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUFVCqgVQFUBVAVQKqBVQqoAoIKqBVAqoKqCqgqoFUCqgVUAUUEAAIAQUEBBBQQUAgBAAoIAqIKAAUAoIKCCggoABQCgAQUAVUFQAIAQUFVBVQVQAgBUAqoAqoKgAUAoIKqCqgKoBQCoAVQARUEAAIAQUEABBQAUAgBAAooAooKAAUAoIKACggoIBQCgAQUAQUEAAIAVUEABBQVUAgBVQoIAoIKAAUAKoKACggKoBQCqgQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUCoBBQVUFVCgAVUICBVQQUAoIBQCggqoKqBAAqoUFCqgoIAUUAgBRQQAEACgAQAICBAAUUAqIBQCogoAKABAAoAUFCgAqIAVUAgBVQVAFQCgAVAICBUAVUAqoBQCqgqAKgBAAqAUFCoAqoARUAgBFQQAEACgAQAKKBAARUAooBQCigoAKABAAoAFUCgAooAQUCoBBQVUFVCqgVUCoBVQQUAoIFUCggqoKqBVQqoBQCqgoIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVUFUCggqoKCBVAVUICBVQQUAqoKqBBQVUEFCqgqoUFCqgoIAQAEFCggoIKCBBQQAICBAAUUAoAKCBBQQUEFCgAoAUFCgAqIAVAEFCggqoKCBVAVAICBUAVUAqAKCBBQVQEFAqgqAUFCoAqoAQAEFCggooKCABQQAKKBAARUAoAKCBBQQUEFCggoAFUCgAooAQAFVCqgoIKqBVQVUCoBVQQUAoACqBVAQUFUAqgqoBQCqgoIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVUCoCAgVUKqKAoVQFUAqAgIAqoBQFBQqoFUEAQqoKqAUBQUAQAAgCAgQAAgKIoQUEFAIAgIAoABQFBQoABQEUQoIKAAUAQQAVAAgCAgVAAgKqoQUFUAIAKgAqABQFBQqABQFVQoICqAUAVQAQAAgCigQAAgKioQUAFAIAooAoABQBVAoABQFBQoIKCAUBQUAQACoAqAVUAgKAoVUFVAqAgIAoAFUAUAqoBQEAQKoCqBVBQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqoKCCqgVUFVBVQKgCqCggqoAVQEFBVQqoKqCqgFAFVBBQVQACAKCCggQAEABAACAKCCggCAAFAEFBBQoAKACgAFAEABBQFAACAKqCqgVAFQBUACAKKCqgCAAFAFVBVAqAKgCoAFAEFBVQFAACAKCCigQAEABAACAKCCggCAAFAEFBBQoAKACgAFAEFBBQFAACAKCCggVUFVBVQKgKqCggCAAFAEFBBQqoKqCqgVQFUBBQFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVQEFBVQqooChVQoAICBVQVUAqoKCCqgVQQBCqgQAUFCqgqoAQUFFBAACAoihAAoAICBAAQAAoIKiCgAFARRCgAQAUFCgAoAAQUFVBUACAqqhUAoAICBUAVAAoIKqCoAFAVVCoAQAUFCoAqAAQUEVBAACAqKhAAoAKKBAAQAAoIKKCgAFAUFCgAQAFUCgAoAAVUEFBVQCAoChVQqoCoBVQQAAKoKCCqgFAQBCqgVUBQCqgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqoFVBBQVQFUAqgoAFUAqgoIAVQKqCggqoKqBVQQAKqBVQQUACAEABRQQUEFCggoAEFCggooAFAKACogoAKCBAAQAKCBAARQACAFQBVQVQEFCgAoAEFCgAqgAFAKgCqgKoKCBAAQAKCBAAVQACAEABFQAUEFCgAoAEFCgAooAFAKACigoIKCBBQQAKCBBQQUACAFVBBQVUFVCqgqoFVCqgoIAFAKqCggKoCqBVAVUCqBVAQUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+			},
+			{
+				"id": "text-matrix-a",
+				"data": "AQALCn+A/8DhwOHA/8D/wOHA4cDhwOHA"
+			},
+			{
+				"id": "text-matrix-eight",
+				"data": "AQBBCv/B/Af4OHD/gP/B/A/8OHD/gOAAcA4cOHAcAOAAcA4AOHAcAPwAcA48P/AcAPwAcA48P/AcAOAAcA4cOHAcAOAAcA4cOHAcAP/B/A/8OHAcAP/B/Af4OHAcAA=="
+			},
+			{
+				"id": "text-matrix-eleven",
+				"data": "AQBQCv/DgA/8cHD/wwf/w4AP/HBw/8OH4AOADgBwcOADx+ADgA4AcHDgA+f8A4APwHBw/AP3/AOAD8BwcPwDv+ADgA4AOODgA5/gA4AOAB/A4AOP/8P/D/wPgP/Dh//D/w/8BwD/w4M="
+			},
+			{
+				"id": "text-matrix-five",
+				"data": "AQA0Cv/B/BwcP/D/wfwcHD/w4ABwHBw4AOAAcBwcOAD8AHAcHD8A/ABwHBw/AOAAcA44OADgAHAH8DgA4AH8A+A/8OAB/AHAP/A="
+			},
+			{
+				"id": "text-matrix-four",
+				"data": "AQA0Cv/B/g4cP+D/w/8OHD/w4AOHDhw4cOADhw4cOHD8A4cOHD/g/AOHDhw/wOADhw4cOODgA4cOHDhw4AP/D/w4cOAB/gf4OHA="
+			},
+			{
+				"id": "text-matrix-half",
+				"data": "AQA0CuHB/g4AP/Dhw/8OAD/w4cOHDgA4AOHDhw4AOAD/w/8OAD8A/8P/DgA/AOHDhw4AOADhw4cOADgA4cOHD/w4AOHDhw/8OAA="
+			},
+			{
+				"id": "text-matrix-is",
+				"data": "AQAXCv4D/P4H/jgHDjgHADgH/DgD/jgADjgHDv4H/v4D/A=="
+			},
+			{
+				"id": "text-matrix-it",
+				"data": "AQAWCv4H/P4H/DgA4DgA4DgA4DgA4DgA4DgA4P4A4P4A4A=="
+			},
+			{
+				"id": "text-matrix-nine",
+				"data": "AQA0CsHB/AwcP/DhwfwOHD/w8cBwDxw4APnAcA+cOAD9wHAP3D8A78BwDvw/AOfAcA58OADjwHAOPDgA4cH8Dhw/8ODB/A4MP/A="
+			},
+			{
+				"id": "text-matrix-oclock",
+				"data": "AQBQCn+B/g4AH+B/g4f/w/8OAD/w/8OH4cOHDgA4cOHDjuHDgA4AOHDgA5zhw4AOADhw4AP44cOADgA4cOAD/OHDgA4AOHDgA57hw4cOADhw4cOP/8P/D/w/8P/Dh3+B/g/8H+B/g4c="
+			},
+			{
+				"id": "text-matrix-one",
+				"data": "AQAmCn+DBw/8/8OHD/zhw8cOAOHD5w4A4cP3D8Dhw78PwOHDnw4A4cOPDgD/w4cP/H+Dgw/8"
+			},
+			{
+				"id": "text-matrix-past",
+				"data": "AQAzCv+B/gf4P+D/w/8P/D/g4MOHDhwHAODDhw4ABwD/w/8P+AcA/4P/B/wHAOADhwAcBwDgA4cOHAcA4AOHD/wHAOADhwf4BwA="
+			},
+			{
+				"id": "text-matrix-quarter",
+				"data": "AQBeDH+Dhwf4P+D/g/8P+P/Dhw/8P/D/g/8P/OHDhw4cOHAcA4AOHOHDhw4cOHAcA4AOHOHDhw/8P+AcA/AP+OHDhw/8P8AcA/AP8OHDhw4cOOAcA4AOOO3Dhw4cOHAcA4AOHP/D/w4cOHAcA/8OHH+B/g4cOHAcA/8OHAwAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA=="
+			},
+			{
+				"id": "text-matrix-seven",
+				"data": "AQBCCn+D/xwcP/DBwP/D/xwcP/DhwOHDgBwcOADxwOADgBwcOAD5wP+D8BwcPwD9wH/D8BwcPwDvwAHDgA44OADnwOHDgAfwOADjwP/D/wPgP/DhwH+D/wHAP/DgwA=="
+			},
+			{
+				"id": "text-matrix-six",
+				"data": "AQAmCn+B/Bwc/8H8HBzhwHAcHOAAcA44/4BwB/B/wHAH8AHAcA444cBwHBz/wfwcHH+B/Bwc"
+			},
+			{
+				"id": "text-matrix-ten",
+				"data": "AQAmCv+D/wwc/4P/DhwcA4APHBwDgA+cHAPwD9wcA/AO/BwDgA58HAOADjwcA/8OHBwD/w4M"
+			},
+			{
+				"id": "text-matrix-three",
+				"data": "AQBCCv+Dhw/4P/D/wP+Dhw/8P/D/wBwDhw4cOADgABwDhw4cOADgABwD/w/4PwD8ABwD/w/wPwD8ABwDhw44OADgABwDhw4cOADgABwDhw4cP/D/wBwDhw4cP/D/wA=="
+			},
+			{
+				"id": "text-matrix-to",
+				"data": "AQAYCv+B/v+D/xwDhxwDhxwDhxwDhxwDhxwDhxwD/xwB/g=="
+			},
+			{
+				"id": "text-matrix-twelve",
+				"data": "AQBQCv+OA4/8OAHBw///jgOP/DgBwcP/HA4jjgA4AcHDgBwOc44AOAHBw4AcDvuPwDgBwcPwHA/fj8A4AcHD8BwPj44AOADjg4AcDweOADgAfwOAHA4Dj/w/8D4D/xwMAY/8P/AcA/8="
+			},
+			{
+				"id": "text-matrix-twenty",
+				"data": "AQBPCv+OA4/8MHD/g47/jgOP/Dhw/4OOHA4jjgA8cBwDjhwOc44APnAcA44cDvuPwD9wHAH8HA/fj8A78BwB/BwPj44AOfAcAHAcDweOADjwHABwHA4Dj/w4cBwAcBwMAY/8ODAcAHA="
+			},
+			{
+				"id": "text-matrix-two",
+				"data": "AQAmCv+OA4f4/44Dj/wcDiOOHBwOc44cHA77jhwcD9+OHBwPj44cHA8HjhwcDgOP/BwMAYf4"
+			}
+		]
+	}
+}
