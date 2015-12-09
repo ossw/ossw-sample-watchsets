@@ -29,7 +29,11 @@
 			    		"source": {"type": "internal", "property": "minutes"}
 			    	}
 			    ],
-					"defaultActions": "watchface"
+					"defaultActions": "watchface",
+
+					"settings": {
+							"invertible": "false"
+					}
 			}
 		],
 		"resources": [

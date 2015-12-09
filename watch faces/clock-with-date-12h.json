@@ -64,7 +64,11 @@
 			    		"source": {"type": "internal", "property": "year"}
 			    	}
 			    ],
-				"defaultActions": "watchface"
+				"defaultActions": "watchface",
+
+				"settings": {
+						"invertible": "false"
+				}
 			}
 		],
 		"resources": [
