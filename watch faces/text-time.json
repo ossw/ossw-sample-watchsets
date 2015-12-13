@@ -1,6 +1,6 @@
 {
 	"type": "watchset",
-	"name": "text time with date",
+	"name": "text time",
 	"apiVersion": 1,
 	"data": {
 		"screens": [
