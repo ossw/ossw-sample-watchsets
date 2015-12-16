@@ -1,6 +1,6 @@
 {
 	"type": "watchset",
-	"name": "weather-watchset",
+	"name": "weather (5 day)",
 	"apiVersion": 1,
 	"data": {
 		"screens": [
@@ -41,7 +41,7 @@
 				"style": {"width": 32, "height": 32},
 				"imageSet": {"type": "resource", "id": "weather"},
 				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherId5"}
-				},				
+				},
 				{
 				"type": "text", "length": 6,
 				"position": {"x": 35, "y": 3},

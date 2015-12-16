@@ -6,7 +6,7 @@
 		"screens": [
 			{
 			    "id": "watchface",
-			    
+
 			    "controls": [
 			    	{
 			    		"type": "image",
@@ -29,11 +29,11 @@
 			    		"source": {"type": "internal", "property": "minutes"}
 			    	}
 			    ],
-			    
-				"actions": {
-					"button_back_long": {"action": "toggleBacklight"},
-					"button_back_short": {"action": "close"}
-				}
+					"defaultActions": "watchface",
+
+					"settings": {
+							"invertible": "false"
+					}
 			}
 		],
 		"resources": [

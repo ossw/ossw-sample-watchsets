@@ -1,0 +1,588 @@
+{
+	"type": "watchset",
+	"name": "settings",
+	"apiVersion": 2,
+	"data": {
+		"screens": [
+			{
+			    "id": "menu-time",
+
+			    "controls": [
+						{
+							"type": "text",
+							"position": {"x": 2, "y": 12},
+							"size": {"width": 140, "height": 70},
+							"font": {"type": "builtin", "name": "optionBig"},
+							"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+							"source": {"type": "static", "value": "Time"}
+						},
+			   		{
+			    		"type": "image",
+			    		"position": {"x": 52, "y": 74},
+			    		"image": {"type": "resource", "id": "watch"}
+			    	},
+			   		{
+			    		"type": "image",
+			    		"position": {"x": 58, "y": 150},
+			    		"image": {"type": "resource", "id": "down"}
+			    	}
+			    ],
+
+				"actions": {
+					"buttons.select.short": {"action": "showScreen", "screenId":"time"},
+					"buttons.down.short": {"action": "showScreen", "screenId":"menu-date"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "menu-date",
+
+		    "controls": [
+					{
+						"type": "image",
+						"position": {"x": 58, "y": 4},
+						"image": {"type": "resource", "id": "up"}
+					},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "Date"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 45, "y": 74},
+		    		"image": {"type": "resource", "id": "calendar"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 58, "y": 150},
+		    		"image": {"type": "resource", "id": "down"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.up.short": {"action": "showScreen", "screenId":"menu-time"},
+					"buttons.select.short": {"action": "showScreen", "screenId":"date"},
+					"buttons.down.short": {"action": "showScreen", "screenId":"menu-colors"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "menu-colors",
+
+		    "controls": [
+					{
+						"type": "image",
+						"position": {"x": 58, "y": 4},
+						"image": {"type": "resource", "id": "up"}
+					},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "Colors"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 46, "y": 74},
+		    		"image": {"type": "resource", "id": "colors"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 58, "y": 150},
+		    		"image": {"type": "resource", "id": "down"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.up.short": {"action": "showScreen", "screenId":"menu-date"},
+					"buttons.down.short": {"action": "showScreen", "screenId":"menu-backlight"},
+					"buttons.select.short": {"action": "toggleColors"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "menu-backlight",
+
+		    "controls": [
+					{
+						"type": "image",
+						"position": {"x": 58, "y": 4},
+						"image": {"type": "resource", "id": "up"}
+					},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "Backlight"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 45, "y": 74},
+		    		"image": {"type": "resource", "id": "bulb"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 58, "y": 150},
+		    		"image": {"type": "resource", "id": "down"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.up.short": {"action": "showScreen", "screenId":"menu-colors"},
+					"buttons.down.short": {"action": "showScreen", "screenId":"menu-erase"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "menu-erase",
+
+		    "controls": [
+					{
+						"type": "image",
+						"position": {"x": 58, "y": 4},
+						"image": {"type": "resource", "id": "up"}
+					},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "Erase data"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 50, "y": 74},
+		    		"image": {"type": "resource", "id": "erase"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 58, "y": 150},
+		    		"image": {"type": "resource", "id": "down"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.up.short": {"action": "showScreen", "screenId":"menu-backlight"},
+					"buttons.down.short": {"action": "showScreen", "screenId":"menu-restart"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "menu-restart",
+
+		    "controls": [
+					{
+						"type": "image",
+						"position": {"x": 58, "y": 4},
+						"image": {"type": "resource", "id": "up"}
+					},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "Restart"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 48, "y": 74},
+		    		"image": {"type": "resource", "id": "restart"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 58, "y": 150},
+		    		"image": {"type": "resource", "id": "down"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.up.short": {"action": "showScreen", "screenId":"menu-erase"},
+					"buttons.down.short": {"action": "showScreen", "screenId":"menu-about"},
+					"buttons.select.short": {"action": "restart"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "menu-about",
+
+		    "controls": [
+					{
+						"type": "image",
+						"position": {"x": 58, "y": 4},
+						"image": {"type": "resource", "id": "up"}
+					},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "About"}
+		    	},
+		   		{
+		    		"type": "image",
+		    		"position": {"x": 46, "y": 74},
+		    		"image": {"type": "resource", "id": "about"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.up.short": {"action": "showScreen", "screenId":"menu-restart"},
+					"buttons.select.short": {"action": "showScreen", "screenId":"about"},
+					"buttons.back.long": {"action": "toggleBacklight"},
+					"buttons.back.short": {"action": "close"}
+				}
+			},
+			{
+		    "id": "time",
+
+				"model": {
+					"hour": {"type": "integer", "value": {"type": "internal", "property": "hour"}, "min": {"type": "static", "value": "0"}, "max": {"type": "static", "value": "23"}, "overflow": "true"},
+					"minutes": {"type": "integer", "value": {"type": "internal", "property": "minutes"}, "min": {"type": "static", "value": "0"}, "max": {"type": "static", "value": "59"}, "overflow": "true"},
+					"mode": {"type": "enum", "values": ["HOUR", "MINUTES"], "value": {"type": "static", "value": "HOUR"}}
+				},
+
+		    "controls": [
+					{
+						"type": "text",
+						"position": {"x": 2, "y": 12},
+						"size": {"width": 140, "height": 70},
+						"font": {"type": "builtin", "name": "optionBig"},
+						"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+						"source": {"type": "static", "value": "Set time"}
+					},
+					{
+						"choose": {"type": "model", "property": "mode"},
+						"when": {
+							"HOUR": [
+								{
+									"type": "image",
+									"position": {"x": 26, "y": 71},
+									"image": {"type": "resource", "id": "up"}
+								},
+								{
+									"type": "image",
+									"position": {"x": 26, "y": 143},
+									"image": {"type": "resource", "id": "down"}
+								}
+							],
+							"MINUTES": [
+								{
+									"type": "image",
+									"position": {"x": 92, "y": 71},
+									"image": {"type": "resource", "id": "up"}
+								},
+								{
+									"type": "image",
+									"position": {"x": 92, "y": 143},
+									"image": {"type": "resource", "id": "down"}
+								}
+							]
+						}
+					},
+					{
+						"type": "image",
+						"position": {"x": 12, "y": 90},
+						"image": {"type": "resource", "id": "bigNumbersBackground"}
+					},
+					{
+						"type": "image",
+						"position": {"x": 70, "y": 104},
+						"image": {"type": "resource", "id": "timeSeparator"}
+					},
+					{
+						"type": "image",
+						"position": {"x": 78, "y": 90},
+						"image": {"type": "resource", "id": "bigNumbersBackground"}
+					},
+					{
+						"type": "number",
+						"numberRange": "0-99",
+						"position": {"x": 18, "y": 96},
+						"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "bigNumbers"}, "space": 3, "leftPadded": true},
+						"source": {"type": "model", "property": "hour"}
+					},
+					{
+						"type": "number",
+						"numberRange": "0-99",
+						"position": {"x": 84, "y": 96},
+						"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "bigNumbers"}, "space": 3, "leftPadded": true},
+						"source": {"type": "model", "property": "minutes"}
+					}
+		    ],
+
+				"actions": {
+					"choose": {"type": "model", "property": "mode"},
+					"when": {
+						"HOUR": {
+							"buttons.up.short": {"action": "model.hour.add", "value": {"type": "static", "value": "1"}},
+							"buttons.select.short": {"action": "model.mode.set", "value": {"type": "static", "value": "MINUTES"}},
+							"buttons.down.short": {"action": "model.hour.subtract", "value": {"type": "static", "value": "1"}},
+							"buttons.back.short": {"action": "showScreen", "screenId":"menu-time"}
+						},
+						"MINUTES": {
+							"buttons.up.short": {"action": "model.minutes.increment"},
+							"buttons.select.short": [
+									{
+											"action": "setTime", "parameters": {
+													"hour": {"type": "model", "property": "hour"},
+													"minutes": {"type": "model", "property": "minutes"},
+													"seconds": {"type": "static", "value": "0"}
+											}
+									},
+									{"action": "showScreen", "screenId":"menu-time"}
+							],
+							"buttons.down.short": {"action": "model.minutes.decrement"},
+							"buttons.back.short": {"action": "model.mode.set", "value": {"type": "static", "value": "HOUR"}}
+						}
+					},
+					"buttons.back.long": {"action": "toggleBacklight"}
+				}
+			},
+			{
+		    "id": "date",
+
+				"model": {
+					"day": {"type": "integer", "value": {"type": "internal", "property": "dayOfMonth"}, "min": {"type": "static", "value": "1"}, "max": {"type": "static", "value": "31"}, "overflow": "true"},
+					"month": {"type": "integer", "value": {"type": "internal", "property": "month"}, "min": {"type": "static", "value": "1"}, "max": {"type": "static", "value": "12"}, "overflow": "true"},
+					"year": {"type": "integer", "value": {"type": "internal", "property": "year"}, "min": {"type": "static", "value": "2000"}, "max": {"type": "static", "value": "3000"}, "overflow": "false"},
+					"mode": {"type": "enum", "values": ["DAY", "MONTH", "YEAR"], "value": {"type": "static", "value": "DAY"}}
+				},
+
+		    "controls": [
+					{
+						"type": "text",
+						"position": {"x": 2, "y": 12},
+						"size": {"width": 140, "height": 70},
+						"font": {"type": "builtin", "name": "optionBig"},
+						"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+						"source": {"type": "static", "value": "Set date"}
+					},
+					{
+						"choose": {"type": "model", "property": "mode"},
+						"when": {
+							"DAY": [
+								{
+									"type": "image",
+									"position": {"x": 8, "y": 79},
+									"image": {"type": "resource", "id": "up"}
+								},
+								{
+									"type": "image",
+									"position": {"x": 8, "y": 134},
+									"image": {"type": "resource", "id": "down"}
+								}
+							],
+							"MONTH": [
+								{
+									"type": "image",
+									"position": {"x": 47, "y": 79},
+									"image": {"type": "resource", "id": "up"}
+								},
+								{
+									"type": "image",
+									"position": {"x": 47, "y": 134},
+									"image": {"type": "resource", "id": "down"}
+								}
+							],
+							"YEAR": [
+								{
+									"type": "image",
+									"position": {"x": 99, "y": 79},
+									"image": {"type": "resource", "id": "up"}
+								},
+								{
+									"type": "image",
+									"position": {"x": 99, "y": 134},
+									"image": {"type": "resource", "id": "down"}
+								}
+							]
+						}
+					},
+					{
+						"type": "image",
+						"position": {"x": 5, "y": 99},
+						"image": {"type": "resource", "id": "smallNumbersBackground"}
+					},
+					{
+						"type": "image",
+						"position": {"x": 44, "y": 99},
+						"image": {"type": "resource", "id": "smallNumbersBackground"}
+					},
+					{
+						"type": "image",
+						"position": {"x": 84, "y": 99},
+						"image": {"type": "resource", "id": "smallNumbersDoubleBackground"}
+					},
+					{
+						"type": "number",
+						"numberRange": "0-99",
+						"position": {"x": 10, "y": 104},
+						"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "smallNumbers"}, "space": 2, "leftPadded": true},
+						"source": {"type": "model", "property": "day"}
+					},
+					{
+						"type": "number",
+						"numberRange": "0-99",
+						"position": {"x": 49, "y": 104},
+						"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "smallNumbers"}, "space": 2, "leftPadded": true},
+						"source": {"type": "model", "property": "month"}
+					},
+					{
+						"type": "number",
+						"numberRange": "0-9999",
+						"position": {"x": 89, "y": 104},
+						"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "smallNumbers"}, "space": 2, "leftPadded": true},
+						"source": {"type": "model", "property": "year"}
+					}
+		    ],
+
+				"actions": {
+					"choose": {"type": "model", "property": "mode"},
+					"when": {
+						"DAY": {
+							"buttons.up.short": {"action": "model.day.increment"},
+							"buttons.select.short": {"action": "model.mode.set", "value": {"type": "static", "value": "MONTH"}},
+							"buttons.down.short": {"action": "model.day.decrement"},
+							"buttons.back.short": {"action": "showScreen", "screenId":"menu-date"}
+						},
+						"MONTH": {
+							"buttons.up.short": {"action": "model.month.increment"},
+							"buttons.select.short": {"action": "model.mode.set", "value": {"type": "static", "value": "YEAR"}},
+							"buttons.down.short": {"action": "model.month.decrement"},
+							"buttons.back.short": {"action": "model.mode.set", "value": {"type": "static", "value": "DAY"}}
+						},
+						"YEAR": {
+							"buttons.up.short": {"action": "model.year.increment"},
+							"buttons.select.short": [
+									{
+											"action": "setTime", "parameters": {
+													"year": {"type": "model", "property": "year"},
+													"month": {"type": "model", "property": "month"},
+													"day": {"type": "model", "property": "day"}
+											}
+									},
+									{"action": "showScreen", "screenId":"menu-date"}
+							],
+							"buttons.down.short": {"action": "model.year.decrement"},
+							"buttons.back.short": {"action": "model.mode.set", "value": {"type": "static", "value": "MONTH"}}
+						}
+					},
+					"buttons.back.long": {"action": "toggleBacklight"}
+				}
+			},
+			{
+		    "id": "about",
+
+		    "controls": [
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 12},
+		    		"size": {"width": 140, "height": 70},
+		    		"font": {"type": "builtin", "name": "optionBig"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "static", "value": "About"}
+		    	},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 80},
+		    		"size": {"width": 140, "height": 40},
+		    		"font": {"type": "builtin", "name": "normalBold"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "false"},
+		    		"source": {"type": "internal", "property": "macAddress"}
+		    	},
+		    	{
+		    		"type": "text",
+		    		"position": {"x": 2, "y": 112},
+		    		"size": {"width": 140, "height": 40},
+		    		"font": {"type": "builtin", "name": "normalBold"},
+		    		"style": {"horizontalAlign": "center", "verticalAlign": "center", "multiline": "true"},
+		    		"source": {"type": "internal", "property": "firmwareVersion"}
+		    	}
+		    ],
+
+				"actions": {
+					"buttons.back.short": {"action": "showScreen", "screenId":"menu-about"},
+					"buttons.back.long": {"action": "toggleBacklight"}
+				}
+			}
+		],
+		"resources": [{
+				"id": "watch",
+				"data": "AQAoNAB///gAAH//+AAAf//4AAB///gAAH//+AAAf//4AAB///gAAf///gAH////gB/////gP/////B+AAAB+HwAAAD4+AAAAHzwAHAAPPAAcAA88ABwADzwAHAAPPAAcAA88ABwADzwAHAAPPAAcAA88ABwAD/wAHAAP/AAcAA/8AB4AD/wAHwAP/AAPgA/8AAfAD/wAA+AP/AAB8A88AAD4DzwAAHgPPAAAMA88AAAADzwAAAAPPAAAAA88AAAADz4AAAAfHwAAAD4fgAAAfg/////8B/////gB////4AB///+AAB///gAAH//+AAAf//4AAB///gAAH//+AAAf//4AAB///gA"
+			},
+			{
+				"id": "calendar",
+				"data": "AQA1NAADAAAGAAAAB4AADwAAAAeAAA8AAAAHgAAPAAAAB4AADwAAAAeAAA8AAH/3v//vf/D/97//73/4//e//+9/+P/3v//vf/j/+H//8P/4////////+P////////j////////4////////+PAAAAAAAHjwAAAAAAB48AB/j/H+ePAAf4/x/njwAH+P8f548AB/j/H+ePAAf4/x/njwAH+P8f548AB/j/H+ePAAf4/x/njwAH+P8f548AAAAAAAePAAAAAAAHjz/H+P8f548/x/j/H+ePP8f4wx/njz/H+MMf548/x/jDH+ePP8f4wx/njz/H+P8f548/x/j/H+ePAAAAAAAHjwAAAAAAB48/x/j/H+ePP8f4/x/njz/H+P8f548/x/j/H+ePP8f4/x/njz/H+P8f548/x/j/H+ePP8f4/x/njwAAAAAAB48AAAAAAAePAAAAAAAHj////////4////////+H////////A="
+			},
+			{
+				"id": "colors",
+				"data": "AQA0NAAAA/gAAAAAAD//wAAAAAH///gAAAAH///+AAAAD////wAAAD/////AAAB/////4AAA//gB//AAAf/AAD/4AAP/AAAP/AAH/AA8B/4AB/gAP4H+AA/wAD/g/wAf4AA/8H+AH8AAP/g/gD/AAD/8P8A/gAA//h/AfwAAP/8P4H8AAD//D+B/AAA//4/gfgAAP/+H4P4AAD//x/D+AAA//8fw/gAAP//H8P4AAD//x/D+AAA//8fw/gAAP//H8P4AAD//x/D+AAA//8fw/gAAP//H8P4AAD//x/B+AAA//4fwfwAAP/+P4H8AAD//D+B/AAA//w/gP4AAP/4fwD/AAD/8P8AfwAA/+D+AH+AAP/B/gA/wAD/g/wAP+AA/gf8AB/wAPAP+AAP/AAAP/AAB/8AAP/gAAP/wAP/wAAB/////4AAAP////8AAAA////8AAAAH///+AAAAAf//+AAAAAA//8AAAAAAA/wAAAA="
+			},
+			{
+				"id": "bulb",
+				"data": "AQA2NAAAADAAAAAAAAAwAAAAAAAAMAAAAAAAADAAAAAAAAAAAAAAADAAAAAwAAA4A/8AcAAAHA//wOAAAAw///DAAAAA/AD8AAAAAfAAPgAAAAPAAA8AAAAHgAAHgAAABwAAA4AAAA8AAAPAAAAOAAABwAAADgAAAcAAAB4AAAHgAAAcAAAA4AAAHAAAAOAAABwAAADgAA+cBgGA58APnAcDgOfAABwCzQDgAAAcAjEA4AAAHAECAOAAABwBAgDgAAAOAQIBwAAADgCEAcAAAAcAhAOAAAAHgIQHgAAAA8CEDwAAAAHghB4AAAAA8IQ8AAAAAHCEOAAAAAAwhDAAAAAAP//wAAAAAH//+AAAAABwADgAAAAAMAAwAAAAADAAMAAAAAB///gAAAAAf//4AAAAADAAMAAAAAAwADAAAAAAcAA4AAAAAHgAeAAAAAA///AAAAAAH//gAAAAAAf/gAAAAAAH/4AAAAAAB/+AAAA="
+			},
+			{
+				"id": "restart",
+				"data": "AQAwNAAAD+AAAAAAD+AAAAAAD+AAAAAAD+AAAAAAD+AAAAAAD+AAAAAAD+AAAAAAD+D/+ABgD+D/8ADgD+D/4AHwD+D/wAPwD+D/gAf4D+D/wA/8D+D/4B/4D+D/8B/wD+D/+D/gD+D3/D/AD+Dj/H+AD+DB/n8AD+CA/n8AD+AA/n4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAAf/4AAAAA/n8AAAAA/n8AAAAB/n8AAAAB/n+AAAAB/D/AAAAD/D/AAAAD+B/gAAAH+B/wAAAP8A/4AAAf8Af+AAB/4AP/gAD/wAP/8A//gAH/////AAB////+AAA////8AAAf///wAAAH///AAAAA//8AAAAAD/AAAA=="
+			},
+			{
+				"id": "erase",
+				"data": "AQAsNAAA//AAAAAB//gAAAAD//wAAAAH//4AAAAPwD8AAAAPgB8AAAAPAA8AAAAPAA8AAB//////gD//////wD//////wD//////wP//////8P//////8P//////8P//////8A8AAAAPAA8AAAAPAA8AAAAPAA8AAAAPAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8PDw8PAA8AAAAPAA8AAAAPAA8AAAAPAA+AAAAfAAf////+AAf////+AAP////8AAD////wAA=="
+			},
+			{
+				"id": "about",
+				"data": "AQA0NAAAA/wAAAAAAD//wAAAAAD///gAAAAD///+AAAAD////wAAAB/+B//AAAB/4AB/4AAA/4AAH/AAAf4AAAf4AAP8AAAB/AAD8AAAAP4AB+AA+AB+AA/AAfwAPwAPwAP+AB+AH4AD/gAfgB8AA/4AD8A/AAP+AA/APgAB/AAHwH4AAPgAB+B8AAAAAAPgfAAAAAAD4HwAAAAAA+D8AAAAAAPw+AAB/AAB8PgAAfwAAfD4AAH8AAHw+AAB/AAB8PgAAfwAAfD4AAH8AAHw/AAB/AAB8HwAAfwAA/B8AAH8AAPgfAAB/AAD4H4AAfwAB+A+AAH8AAfAPwAB/AAHwD8AAfwAD8AfgAH8AB+AH4AB/AAfgA/AAfwAPwAH4AAAAH4AB/AAAAD+AAP4AAAB/AAB/gAAB/gAAP+AAA/wAAB/4AB/4AAAP/4D/8AAAA////8AAAAH///+AAAAAf//+AAAAAA//8AAAAAAA/4AAAA="
+			},
+			{
+				"id": "down",
+				"data": "AQAbDvwAB+D+AA/gfwAfwD+AP4AfwH8AD+D+AAfx/AAD+/gAAf/wAAD/4AAAf8AAAD+AAAAfAAAADgAA"
+			},
+			{
+				"id": "up",
+				"data": "AQAbDgAOAAAAHwAAAD+AAAB/wAAA/+AAAf/wAAP7+AAH8fwAD+D+AB/AfwA/gD+AfwAfwP4AD+D8AAfg"
+			},
+			{
+				"id": "bigNumbers",
+				"data": "AwAUJP4D8PAA8OAAcMAAMMAAMIH4EIP8EAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AIP8EIH4EMAAMMAAMOAAcPAA8P4H8P+B8P8B8P4B8PwB8PgB8PgB8PhB8PnB8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8P/B8PwH8PAB8OAAcMAAMMAAMIH4EIP8EAP+AAf+AAf+AP/+AP/+AP/+AP/8EP/4EP/4EP/wMP/gMP/AcP/A8P+B8P8D8P4D8PwH8PgP8PAf8PA/8OB/8MD/8ID/8IH/8AAAAAAAAAAAAAAAAAAAAP4H8PgB8PAAcOAAMMAAMIDwEIP8EAP8AAf+AP/+AP/+AP/+AP/8AP/8EP/wEP8AMP8AcP8A8P8AcP8AMP/wEP/8EP/8AP/+AP/+AP/+AP/+AAf+AAf8EAP8EIHwEIAAMMAAcOAA8PAB8PwH8P/g8P/g8P/A8P/B8P+B8P+D8P8D8P8H8P4H8P4P8P4P8PwP8Pwf8Pgf8Pg/8PA/8PB4MOB4MOD4MOD4MMD4MMH4MIH4MIP4MAP4MAf4MAAAAAAAAAAAAAAAAAAAAP/4MP/4MP/4MP/4MP/4MAAAEAAAEAAAEAAAEAAAEAf/8Af/8Af/8Af/8Af/8Af/8Af/8AcD8AQA8AAAcAAAMAAAEAD4EAP8EAf8AP/+AP/+AP/+AP/+AP/+AP/+AP/+AAf+AAf8AAP8EIH4EIAAMMAAMOAAcPAB8P4H8P4D8PgA8OAAcMAAMMAAMIH4EIP8EAP+EAf/8Af/8Af/8Af/8Af/8AYB8AAAcAAAMAAAEAAAEAH4EAP8AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AIP8EIH4EIAAMMAAMOAAcPAA8P4H8AAAAAAAAAAAAAAAAAAAAAf8EAf4EAf4EAf4MAfwMP/wcP/wcP/gcP/g8P/A8P/A8P/B8P+B8P+D8P+D8P8D8P8H8P4H8P4H8P4P8PwP8Pwf8Pwf8Pgf8Pg/8PA/8PA/8PB/8OB/8OD/8OD/8PwD8PgA8PAAcOAAcMBgMMH4MIP8EIP8EIP8EIP8EIP8EIP8EIH4EMH4MMBgMOAAcPAA8OAAcMAAMIAAEIH4EAP8AAP8AAf+AAf+AAf+AAf+AAf+AAP8AAP8AIH4EIAAEMAAMOAAcPAA8P4H8P4D8PAA8OAAcMAAMMAAMIH4EIP8EAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAf+AAP8AIH4AIAAAMAAAMAAAPAAAPgGAP/+AP/+AP/+AP/+AIf+AIP8EIH4EIAAMMAAMOAAcPAA8P4H8A=="
+			},
+			{
+				"id": "bigNumbersBackground",
+				"data": "AQA3MB////////B////////8f////////P////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////v////////7////////+/////////n////////x////////8H///////8A=="
+			},
+			{
+				"id": "smallNumbers",
+				"data": "AwAKE+HAwMCAQAwAHgAeAB4AHgAeAB4AHgAeAB4AHgAeAAwAgEDAwOHA8cDBwMHAwcDxwPHA8cDxwPHA8cDxwPHA8cDxwPHA8cDxwPHA8cDhwMDAgEAMAB4AngD+APxA/ED4wPDA4cDjwMfAh8CPwAAAAAAAAMHAgMAAQBwAPgD+AP4A/EDgQODA4ED8QP4A/gA+ABwAAECAwMHA+MD4wPHA8cDzwOPA48DHwMRAhECMQBxAHEAAAAAAAAD8QPxA/EAAAAAAAEAfwB/AH8ARwADAAEAMAP4A/gD+AP4AHgAMAIBAgMDhwODAwECAAA4AH8AfwB/AEMAAQAAADAAeAB4AHgAeAAwAgEDAQOHAAAAAAAAAHgAeABxA/ED8wPjA+MDxwPHA88DjwOPA58DHwMfAx8DhwMDAgEAMAB4AHgAeAIxAgEDAQIBADAAeAB4AHgAMAIBAwMDhwOHAwMCAQAwAHgAeAB4AHgAeAAwAgADAAOIA/gD+AJwAgEDAwOHA"
+			},
+			{
+				"id": "smallNumbersBackground",
+				"data": "AQAgHR////h////+f////v//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////f////n////4f///4"
+			},
+			{
+				"id": "smallNumbersDoubleBackground",
+				"data": "AQA4HR////////h////////+f////////v//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////f////////n////////4f///////4"
+			},
+			{
+				"id": "timeSeparator",
+				"data": "AQAFFHD4+PhwAAAAAAAAAAAAAHD4+Phw"
+			}
+		]
+	}
+}

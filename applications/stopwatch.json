@@ -1,0 +1,400 @@
+{
+	"type": "watchset",
+	"name": "stopwatch",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+			    "id": "stopwatch",
+
+			    "controls": [
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-9",
+				    		"position": {"x": 8, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToHours"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 26, "y": 12},
+				    		"style": {"width": 3, "height": 14},
+				    		"image": {"type": "resource", "id": "colon"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 32, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToMinutesRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 67, "y": 5},
+				    		"style": {"width": 4, "height": 5},
+				    		"image": {"type": "resource", "id": "min"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 73, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToSecondsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 108, "y": 5},
+				    		"style": {"width": 7, "height": 4},
+				    		"image": {"type": "resource", "id": "sec"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 117, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 2, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToCsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 8, "y": 47},
+				    		"style": {"width": 33, "height": 17},
+				    		"image": {"type": "resource", "id": "lap"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-999",
+				    		"position": {"x": 48, "y": 47},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 2, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.currentLap.number"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-9",
+				    		"position": {"x": 8, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.currentLap.time", "converter": "msToHours"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 26, "y": 77},
+				    		"style": {"width": 3, "height": 14},
+				    		"image": {"type": "resource", "id": "colon"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 32, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.currentLap.time", "converter": "msToMinutesRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 67, "y": 70},
+				    		"style": {"width": 4, "height": 5},
+				    		"image": {"type": "resource", "id": "min"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 73, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.currentLap.time", "converter": "msToSecondsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 108, "y": 70},
+				    		"style": {"width": 7, "height": 4},
+				    		"image": {"type": "resource", "id": "sec"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 117, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 2, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.currentLap.time", "converter": "msToCsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 8, "y": 112},
+				    		"style": {"width": 46, "height": 17},
+				    		"image": {"type": "resource", "id": "last"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 62, "y": 112},
+				    		"style": {"width": 33, "height": 17},
+				    		"image": {"type": "resource", "id": "lap"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-9",
+				    		"position": {"x": 8, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.lastLap.time", "converter": "msToHours"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 26, "y": 142},
+				    		"style": {"width": 3, "height": 14},
+				    		"image": {"type": "resource", "id": "colon"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 32, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.lastLap.time", "converter": "msToMinutesRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 67, "y": 135},
+				    		"style": {"width": 4, "height": 5},
+				    		"image": {"type": "resource", "id": "min"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 73, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.lastLap.time", "converter": "msToSecondsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 108, "y": 135},
+				    		"style": {"width": 7, "height": 4},
+				    		"image": {"type": "resource", "id": "sec"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 117, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.lastLap.time", "converter": "msToCsRemainder"}
+				    	}
+			    ],
+				"actions": {
+						"button_back_short": {"action": "close"},
+						"button_back_long": {"action": "toggleBacklight"},
+						"button_select_short": {"action": "showScreen", "screenId": "recall"},
+						"button_up_long": {"action": "stopwatch.reset"},
+						"button_up_short": {"action": "stopwatch.startStop"},
+						"button_down_short": {"action": "stopwatch.nextLap"}
+				}
+			},
+
+			{
+			    "id": "recall",
+
+					"model": {
+						"recallLapNo": {"type": "integer", "value": {"type": "internal", "property": "stopwatch.currentLap.number"}, "min": {"type": "static", "value": "1"}, "max": {"type": "internal", "property": "stopwatch.currentLap.number"}, "overflow": "false"}
+					},
+
+			    "controls": [
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-9",
+				    		"position": {"x": 8, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToHours"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 26, "y": 12},
+				    		"style": {"width": 3, "height": 14},
+				    		"image": {"type": "resource", "id": "colon"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 32, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToMinutesRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 67, "y": 5},
+				    		"style": {"width": 4, "height": 5},
+				    		"image": {"type": "resource", "id": "min"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 73, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToSecondsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 108, "y": 5},
+				    		"style": {"width": 7, "height": 4},
+				    		"image": {"type": "resource", "id": "sec"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 117, "y": 5},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 2, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.total.time", "converter": "msToCsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 8, "y": 47},
+				    		"style": {"width": 66, "height": 17},
+				    		"image": {"type": "resource", "id": "recall"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-999",
+				    		"position": {"x": 82, "y": 47},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 2, "leftPadded": true},
+				    		"source": {"type": "model", "property": "recallLapNo"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-9",
+				    		"position": {"x": 8, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.time", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToHours"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 26, "y": 77},
+				    		"style": {"width": 3, "height": 14},
+				    		"image": {"type": "resource", "id": "colon"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 32, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.time", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToMinutesRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 67, "y": 70},
+				    		"style": {"width": 4, "height": 5},
+				    		"image": {"type": "resource", "id": "min"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 73, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.time", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToSecondsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 108, "y": 70},
+				    		"style": {"width": 7, "height": 4},
+				    		"image": {"type": "resource", "id": "sec"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 117, "y": 70},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 2, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.time", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToCsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 8, "y": 112},
+				    		"style": {"width": 52, "height": 17},
+				    		"image": {"type": "resource", "id": "split"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-9",
+				    		"position": {"x": 8, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.split", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToHours"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 26, "y": 142},
+				    		"style": {"width": 3, "height": 14},
+				    		"image": {"type": "resource", "id": "colon"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 32, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.split", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToMinutesRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 67, "y": 135},
+				    		"style": {"width": 4, "height": 5},
+				    		"image": {"type": "resource", "id": "min"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 73, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_big"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.split", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToSecondsRemainder"}
+				    	},
+				   		{
+				    		"type": "image",
+				    		"position": {"x": 108, "y": 135},
+				    		"style": {"width": 7, "height": 4},
+				    		"image": {"type": "resource", "id": "sec"}
+				    	},
+				    	{
+				    		"type": "number",
+				    		"numberRange": "0-99",
+				    		"position": {"x": 117, "y": 135},
+				    		"style": {"type": "numbersFont", "numbersFont": {"type": "resource", "id": "digits_small"}, "space": 3, "leftPadded": true},
+				    		"source": {"type": "internal", "property": "stopwatch.recallLap.split", "index": {"type": "model", "property": "recallLapNo"}, "converter": "msToCsRemainder"}
+				    	}
+			    ],
+				"actions": {
+						"button_back_short": {"action": "showScreen", "screenId": "stopwatch"},
+						"button_select_short": {"action": "showScreen", "screenId": "stopwatch"},
+						"button_up_short": {"action": "model.recallLapNo.increment"},
+						"button_up_long": {"action": "model.recallLapNo.set", "value": {"type": "internal", "property": "stopwatch.currentLap.number"}},
+						"button_down_short": {"action": "model.recallLapNo.decrement"},
+						"button_down_long": {"action": "model.recallLapNo.set", "value": {"type": "static", "value": "1"}}
+				}
+			}
+		],
+		"resources": [
+			{
+				"id": "colon",
+				"data": "AQADDuDg4AAAAAAAAAAA4ODg"
+			},
+			{
+				"id": "min",
+				"data": "AQAEBfDw4MCA"
+			},
+			{
+				"id": "sec",
+				"data": "AQAHBO7uzIg="
+			},
+			{
+				"id": "digits_big",
+				"data": "AwAPHH/8v/rf9u/u8B7wHvAe8B7wHvAe8B7gDsAGgAKAAsAG4A7wHvAe8B7wHvAe8B7wHu/u3/a/+n/8AAAAAgAGAA4AHgAeAB4AHgAeAB4AHgAOAAYAAgACAAYADgAeAB4AHgAeAB4AHgAeAA4ABgACAAB//D/6H/YP7gAeAB4AHgAeAB4AHgAeAA4/9n/6v/zf+OAA8ADwAPAA8ADwAPAA8ADv4N/wv/h//H/8P/of9g/uAB4AHgAeAB4AHgAeAB4ADh/2P/o/+h/2AA4AHgAeAB4AHgAeAB4AHg/uH/Y/+n/8AACAAsAG4A7wHvAe8B7wHvAe8B7wHuAO3/a/+n/6P/YADgAeAB4AHgAeAB4AHgAeAA4ABgACAAB//L/43/Dv4PAA8ADwAPAA8ADwAPAA4ADf+L/8f/o/9gAOAB4AHgAeAB4AHgAeAB4P7h/2P/p//H/8v/jf8O/g8ADwAPAA8ADwAPAA8ADgAN/4v/y/+t/24A7wHvAe8B7wHvAe8B7wHu/u3/a/+n/8f/w/+h/2D+4AHgAeAB4AHgAeAB4AHgAOAAYAAgACAAYADgAeAB4AHgAeAB4AHgAeAA4ABgACAAB//L/63/bv7vAe8B7wHvAe8B7wHvAe4A7f9r/6v/rf9uAO8B7wHvAe8B7wHvAe8B7v7t/2v/p//H/8v/rf9u/u8B7wHvAe8B7wHvAe8B7gDt/2v/p/+j/2AA4AHgAeAB4AHgAeAB4AHg/uH/Y/+n/8"
+			},
+			{
+				"id": "digits_small",
+				"data": "AwAKEX+Av0DewOHA4cDhwMDAgEAAAIBAwMDhwOHA4cDewL9Af4AAAABAAMABwAHAAcAAwABAAAAAQADAAcABwAHAAMAAQAAAf4A/QB7AAcABwAHAAMA/QH+AvwDAAOAA4ADgAN4AvwB/gH+AP0AewAHAAcABwADAP0B/gD9AAMABwAHAAcAewD9Af4AAAIBAwMDhwOHA4cDAwL9Af4A/QADAAcABwAHAAMAAQAAAf4C/AN4A4ADgAOAAwAC/AH+AP0AAwAHAAcABwB7AP0B/gH+AvwDeAOAA4ADgAMAAvwB/gL9AwMDhwOHA4cDewL9Af4B/gD9AHsABwAHAAcAAwABAAAAAQADAAcABwAHAAMAAQAAAf4C/QN7A4cDhwOHAwMC/QH+Av0DAwOHA4cDhwN7Av0B/gH+Av0DewOHA4cDhwMDAv0B/gD9AAMABwAHAAcAewD9Af4A="
+			},
+			{
+				"id": "lap",
+				"data": "AQAhEYAP8P8AwBfpfoDgG9m9gOAcOcOA4Bw5w4DgHDnDgMAYGYGAgBfpfoAAD/D/AIAX6X4AwBgZgADgHDnAAOAcOcAA4Bw5wADeHDnAAL8YGYAAf5AJAAA="
+			},
+			{
+				"id": "last",
+				"data": "AQAuEYAP8P8f/MAX6X4PeOAb2bwGsOAcOcABwOAcOcABwOAcOcABwMAYGYABwIAX6X4AgAAP8P8AAIAX6H6AgMAYGAGBwOAcOAOBwOAcOAOBwOAcOAOBwN4cOD2BwL8YGH6BwH+QCP8AgA=="
+			},
+			{
+				"id": "split",
+				"data": "AQA0EX+H+IAEf/C/C/TADj3g3g3s4A4awOAOHOAOBwDgDhzgDgcA4A4c4A4HAMAMDMAOBwC/C/SABAIAf4f4AAAAAD9L8IAEAgAAzADADgcAAc4A4A4HAAHOAOAOBwABzgDgDgcAHs4A3g4HAD9MAL8OBwB/iAB/hAIA"
+			},
+			{
+				"id": "recall",
+				"data": "AQBCEX+H+P8f4gBAAL9L8X4v0wBgAN7N4bw3s4BwAOHOAcA4c4BwAOHOAcA4c4BwAOHOAcA4c4BwAMDMAYAwMwBgAL9L8QAv0gBAAH+H+AAf4AAAAL8L8QAv0gBAAMAMAYAwMwBgAOcOAcA4c4BwAOeOAcA4c4BwAOPOAcA4c4BwAMHN4bw4c3hvAIDL8X4wMvxfgAAH+P8gEf4/wA=="
+			}
+		]
+	}
+}
