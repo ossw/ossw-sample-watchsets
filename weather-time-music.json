@@ -13,20 +13,175 @@
 			"style": {"width": 32, "height": 32},
 			"imageSet": {"type": "resource", "id": "weather"},
 			"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherId"}
+			},			
+			{
+				"choose": {"type": "internal", "property": "dayOfWeek"},
+				"when": {
+					"1": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Sun"}
+					} ],
+					"2": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Mon"}
+					} ],
+					"3": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Tue"}
+					} ],
+					"4": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Wed"}
+					} ],
+					"5": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Thu"}
+					} ],
+					"6": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Fri"}
+					} ],
+					"7": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 1, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "right"},
+						"source": {"type": "static", "value": "Sat"}
+					} ]
+				}
 			},
 			{
 			"type": "number",
 			"numberRange": "0-99",
-			"position": {"x": 14, "y": 1},
-			"style": {"type": "generated", "thickness": 1, "width": 5, "height": 9, "space": 1, "leftPadded": true},
+			"position": {"x": 29, "y": 2},
+			"style": {"type": "generated", "thickness": 1, "width": 5, "height": 8, "space": 1, "leftPadded": true},
 			"source": {"type": "internal", "property": "dayOfMonth"}
 			},
 			{
-			"type": "number",
-			"numberRange": "0-99",
-			"position": {"x": 32, "y": 1},
-			"style": {"type": "generated", "thickness": 1, "width": 5, "height": 9, "space": 1, "leftPadded": true},
-			"source": {"type": "internal", "property": "month"}
+				"choose": {"type": "internal", "property": "month"},
+				"when": {
+					"1": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Jan"}
+					} ],
+					"2": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Feb"}
+					} ],
+					"3": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Mar"}
+					} ],
+					"4": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Apr"}
+					} ],
+					"5": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "May"}
+					} ],
+					"6": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Jun"}
+					} ],
+					"7": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Jul"}
+					} ],
+					"8": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Aug"}
+					} ],
+					"9": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Sep"}
+					} ],
+					"10": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Oct"}
+					} ],
+					"11": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Nov"}
+					} ],
+					"12": [ {
+						"type": "text", "length": 3,
+						"position": {"x": 46, "y": 1},
+						"size": {"width": 22, "height": 12},
+						"font": {"type": "builtin", "name": "smallRegular"},
+						"style": {"horizontalAlign": "left"},
+						"source": {"type": "static", "value": "Dec"}
+					} ]
+				}
 			},
 			{
 			"type": "text", "length": 6,
@@ -38,7 +193,7 @@
 			},
 			{
 			"type": "text", "length": 4,
-			"position": {"x": 4, "y": 38},
+			"position": {"x": 5, "y": 38},
 			"size": {"width": 30, "height": 12},
 			"font": {"type": "builtin", "name": "smallRegular"},
 			"style": {"horizontalAlign": "left"},
@@ -110,6 +265,8 @@
 				"button_up_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "prevTrack"},
 				"button_select_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "playPause"},
 				"button_select_long": {"action": "settings"},
+				"button_back_short": {"action": "nextWatchface"},
+				"button_back_long": {"action": "close"},
 				"button_down_short": {"action": "extensionFunction",  "extensionId": "com.althink.android.ossw.plugins.musicplayer", "function": "nextTrack"},
 				"button_down_long": {"action": "extensionFunction", "extensionId": "com.althink.android.ossw", "function": "phone.discovery"}
 			}
