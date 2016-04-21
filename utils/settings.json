@@ -141,6 +141,7 @@
 				"actions": {
 					"buttons.up.short": {"action": "showScreen", "screenId":"menu-colors"},
 					"buttons.down.short": {"action": "showScreen", "screenId":"menu-erase"},
+					"buttons.select.short": {"action": "toggleBacklight"},
 					"buttons.back.long": {"action": "toggleBacklight"},
 					"buttons.back.short": {"action": "close"}
 				}
@@ -177,6 +178,7 @@
 				"actions": {
 					"buttons.up.short": {"action": "showScreen", "screenId":"menu-backlight"},
 					"buttons.down.short": {"action": "showScreen", "screenId":"menu-restart"},
+					"buttons.select.short": {"action": "format"},
 					"buttons.back.long": {"action": "toggleBacklight"},
 					"buttons.back.short": {"action": "close"}
 				}
