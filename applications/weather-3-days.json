@@ -1,0 +1,215 @@
+{
+	"type": "watchset",
+	"name": "weather-3-days",
+	"apiVersion": 1,
+	"data": {
+		"screens": [
+			{
+				"id": "weatherForecast",
+				"controls": [
+				{
+				"type": "imageFromSet",
+				"position": {"x": 2, "y": 6},
+				"style": {"width": 32, "height": 32},
+				"imageSet": {"type": "resource", "id": "weather"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherId1"}
+				},
+				{
+				"type": "imageFromSet",
+				"position": {"x": 2, "y": 64},
+				"style": {"width": 32, "height": 32},
+				"imageSet": {"type": "resource", "id": "weather"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherId2"}
+				},
+				{
+				"type": "imageFromSet",
+				"position": {"x": 2, "y": 121},
+				"style": {"width": 32, "height": 32},
+				"imageSet": {"type": "resource", "id": "weather"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherId3"}
+				},
+				
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 35, "y": 2},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "tempMorning1"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 70, "y": 2},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "temperature1"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 105, "y": 2},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "tempEvening1"}
+				},
+				{
+				"type": "text", "length": 4,
+				"position": {"x": 35, "y": 15},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "humidity1"}
+				},
+				{
+				"type": "text", "length": 5,
+				"position": {"x": 70, "y": 15},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "windSpeed1"}
+				},
+				{
+				"type": "text", "length": 7,
+				"position": {"x": 100, "y": 15},
+				"size": {"width": 42, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "pressure1"}
+				},
+				{
+				"type": "text", "length": 30,
+				"position": {"x": 35, "y": 28},
+				"size": {"width": 109, "height": 24},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "center", "multiline": "true"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherDescription1"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 35, "y": 60},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "tempMorning2"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 70, "y": 60},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "temperature2"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 105, "y": 60},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "tempEvening2"}
+				},
+				{
+				"type": "text", "length": 4,
+				"position": {"x": 35, "y": 73},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "humidity2"}
+				},
+				{
+				"type": "text", "length": 5,
+				"position": {"x": 70, "y": 73},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "windSpeed2"}
+				},
+				{
+				"type": "text", "length": 7,
+				"position": {"x": 100, "y": 73},
+				"size": {"width": 42, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "pressure2"}
+				},
+				{
+				"type": "text", "length": 30,
+				"position": {"x": 35, "y": 86},
+				"size": {"width": 109, "height": 24},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "center", "multiline": "true"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherDescription2"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 35, "y": 117},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "tempMorning3"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 70, "y": 117},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "temperature3"}
+				},
+				{
+				"type": "text", "length": 6,
+				"position": {"x": 105, "y": 117},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "tempEvening3"}
+				},
+				{
+				"type": "text", "length": 4,
+				"position": {"x": 35, "y": 130},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "humidity3"}
+				},
+				{
+				"type": "text", "length": 5,
+				"position": {"x": 70, "y": 130},
+				"size": {"width": 30, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "windSpeed3"}
+				},
+				{
+				"type": "text", "length": 7,
+				"position": {"x": 100, "y": 130},
+				"size": {"width": 42, "height": 12},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "right"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "pressure3"}
+				},
+				{
+				"type": "text", "length": 30,
+				"position": {"x": 35, "y": 143},
+				"size": {"width": 109, "height": 24},
+				"font": {"type": "builtin", "name": "smallRegular"},
+				"style": {"horizontalAlign": "center", "multiline": "true"},
+				"source": {"type": "extension", "extensionId": "com.klapaucius.ossw.weather", "property": "weatherDescription3"}
+				}
+				],
+				"actions": {
+				"button_back_short": {"action": "nextWatchface"},
+				"button_back_long": {"action": "close"},
+				"button_select_long": {"action": "settings"}
+				}
+			}
+		],
+		"resources": [
+		{
+		"id": "weather",
+		"data": "FAAACyAgAAGAAAABgAAAwYMAAcGDgADhhwAAYYYAAHAOABAgBAg4D/AcPj/8fA94HvACcA5AAOAHAADAAwAAwAMA/MADP/zAAz8AwAMAAMADAADgBwACcA5AD3ge8D4//Hw4D/AcECAECABwDgAAYYYAAOGHAAHBg4AAwYMAAAGAAAABgAAAAAAAADAAAAIxgAACMQAAAzMAAAH+EAA5/jAAD8/gAAcDAAAHAD8AfgD/wH4B4eAHD8DgBj+AcAx/ADA44AA4IMAAPAPAAB4PwAAGH8AABxwAAAMYAAAHGAAABxgAAA4eAAAeD////Af///AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwAAAP/AAAHh4AADwHAAP4AwAH8AOADgADwAwAAeAcAADw+AAAOfgAAB3AAAAfgAAADwAAAB+AAAAfgAAAOcAAAHn////wf///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8AAAB/wAAA8+AAAcDwAB+AcAB/ADgA8AA4AOAAHgHAAB8HwAADn4AAAZwAAAH4AAAA+AAAAfAAAAH4AAABnAAAA5////8P///+Af//8AAAAAAAAAAAAAAEAAAAHAAAAHwAAAB8AAAAeAAAAHgAAAAAAAAAAAAAAAAAAAAAAAAAHwAAAH/AAADz4AABwPAAH4BwAH8AOADwADgA4AAeAcAAHwfAAAOfgAABnAAAAfgAAAD4AAAB8AAAAfgAAAGcAAADn////w////4B///wAAAAAAAAADAAAADwAMAB8APAAfADwAHgA8Ag4APA4AAAAeAAAAPgAAAB4AAAAcAAAAAfAAAAf8AAAPPgAAHA8AAfgHAAfwA4APAAOADgAB4BwAAfB8AAA5+AAAGcAAAB+AAAAPgAAAHwAAAB+AAAAZwAAAOf////D////gH///AAAAAAAAAABACAABwDgEA8B4BAfAeDUDwHgeA4Bwf8AAAB4AAAAfAAAAJYAAAAQAAAAB8AAAB/wAAA8+AAAcDwAB+AcAB/ADgA8AA4AOAAHgHAAB8HwAADn4AAAZwAAAH4AAAA+AAAAfAAAAH4AAABnAAAA5////8P///+Af//8AAAAAAAACAAAAGsAAAA+AAAAPgAAAP+AAAA+AAAAKwAAAAgAAAAAAAAAAAAAAAAAAAAHwAAAH/AAADz4AABwPAAH4BwAH8AOADwADgA4AAeAcAAHwfAAAOfgAABnAAAAfgAAAD4AAAB8AAAAfgAAAGcAAADn////w////4B///wAAAAAACAAGsCkAA+A+Ag/wPgIP8H+Kw+AeB4awLz/ggAgHgAAAD4AAABpAAAACAAAAAfAAAAf8AAAPPgAAHA8AAfgHAAfwA4APAAOADgAB4BwAAfB8AAA5+AAAGcAAAB+AAAAPgAAAHwAAAB+AAAAZwAAAOf////D////gH///gAAAAYAAAAPAIAAGwDAABOBYAALAnAYDgNwPAYB4G4AAMBOAAAALAAAABgAAAAYAAAAB8AAAB/wAAA8+AAAcDwAB+AcAB/ADgA8AA4AOAAHgHAAB8HwAADn4AAAZwAAAH4AAAA+AAAAfAAAAH4AAABnADwA5/w8/8P+Of+AfHj8AABwAAAA8AAAAPwAAAD8AAAAOAAAADAAAAAwAAAAYAAAAEAAAABAAAAAAAAAAAAAAAA/8AAD//wAD/h/AD8AB4B4AAOA8H/hgcH/8YOD4AGDB4ADhw4ABwcMAB4HAAA8A4AB+APwH+AB//+OAP/4PgB/g/wAH//wAA//AAAH4AAAAf4AAAD/4AADj+AAA8AAAAH8AAAGfwAABw8AAAPgAAAB8AAAHiAAAHwAAAB4AAAA=="
+		}
+		]
+	}
+}
